@@ -43,4 +43,8 @@ def checkDataIntegrity(df):
 
 combinedDataSet.to_csv('data/dataset2.csv', index=False)
 
+churnedCustomerIds = df[df['is_churned'] == 1]['customer_id'].unique().tolist()
+churnedCustomersActivity = combinedDataSet[combinedDataSet['customer_id'].isin(churnedCustomerIds)]
+print(len(combinedDataSet))
+print(len(churnedCustomersActivity))
 
