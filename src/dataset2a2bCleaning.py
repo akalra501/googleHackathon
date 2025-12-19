@@ -17,11 +17,20 @@ enterpriseBusinesses = df[df['product_tier'] == 'Enterprise']
 # starterSummaryStats = starterInvestigationData.describe()
 # # print(starterSummaryStats)
 def checkDataIntegrity(df):
+    '''
+    Checks for inconsistencies in the dataframe provided.
+
+    nullSummary: A summary of null values in each column.
+    eventsWithoutLogins: Number of rows where feature_events > 0 but logins = 0.
+    minutesWithoutLogins: Number of rows where session_minutes > 0 but logins = 0.
+    duplicateRows: Number of duplicate rows based on the customer_id and date columns.
+
+    '''
     nullSummary = df.isnull().sum()
     eventsWithoutLogins = df[(df['feature_events'] > 0) & (df['logins'] == 0)]
     minutesWithoutLogins = df[(df['session_minutes'] > 0) & (df['logins'] == 0)]
     duplicateRows = df.duplicated(subset=['customer_id', 'date']).sum()
-    
+
     return {
         "nullSummary": nullSummary,
         "inconsistentEvents": len(eventsWithoutLogins),
@@ -29,7 +38,9 @@ def checkDataIntegrity(df):
         "duplicateEntries": duplicateRows
     }
 
-inspectionResults = checkDataIntegrity(combinedDataSet)
-print(inspectionResults)
+# inspectionResults = checkDataIntegrity(combinedDataSet)
+# print(inspectionResults)
+
+combinedDataSet.to_csv('data/dataset2.csv', index=False)
 
 
