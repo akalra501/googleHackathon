@@ -40,6 +40,7 @@ def checkDataIntegrity(df):
 
 # inspectionResults = checkDataIntegrity(combinedDataSet)
 # print(inspectionResults)
+<<<<<<< HEAD
 
 # combinedDataSet.to_csv('data/dataset2.csv', index=False)
 churnedCustomerIds = df[df['is_churned'] == 1]['customer_id'].unique().tolist()
@@ -99,7 +100,15 @@ tempDates = pd.to_datetime(df3['created_at'], format='mixed')
 
 # 2. Add the new column with the requested format %m-%d-%y
 df3['createdAtDate'] = tempDates.dt.strftime('%m-%d-%y')
+=======
+>>>>>>> 9e6c2bcae8810d6e8930f76916d96eeeb200cea6
 
+combinedDataSet.to_csv('data/dataset2.csv', index=False)
+
+churnedCustomerIds = df[df['is_churned'] == 1]['customer_id'].unique().tolist()
+churnedCustomersActivity = combinedDataSet[combinedDataSet['customer_id'].isin(churnedCustomerIds)]
+print(len(combinedDataSet))
+print(len(churnedCustomersActivity))
 
 ticketsWithChurnDates = pd.merge(
     df3, 
