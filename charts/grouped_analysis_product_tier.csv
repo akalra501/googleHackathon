@@ -1,0 +1,4 @@
+product_tier,customers,churn_rate,avg_acv,avg_onboarding_score,avg_discount,renewal_rate
+Growth,1283,0.087,43126.0,6.32,0.2,0.467
+Starter,1124,0.195,12472.0,6.19,0.2,0.503
+Enterprise,593,0.056,64897.0,6.3,0.2,0.445

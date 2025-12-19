@@ -1,0 +1,5 @@
+sales_segment,customers,churn_rate,avg_acv,avg_onboarding_score,avg_discount,renewal_rate
+SMB_Inside,1320,0.164,4119.0,6.24,0.2,0.495
+MidMarket,632,0.046,25112.0,6.35,0.2,0.46
+SMB_Field,574,0.169,3938.0,6.21,0.2,0.491
+Enterprise,474,0.044,177775.0,6.3,0.2,0.426

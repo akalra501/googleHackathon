@@ -1,0 +1,9 @@
+industry,customers,churn_rate,avg_acv,avg_onboarding_score,avg_discount,renewal_rate
+Ecommerce,278,0.101,28685.0,6.25,0.19,0.496
+Hospitality,275,0.127,36709.0,6.15,0.21,0.433
+Healthcare,273,0.147,34261.0,6.18,0.19,0.509
+Logistics,268,0.153,34238.0,6.0,0.21,0.47
+Professional Services,264,0.152,34638.0,6.37,0.2,0.477
+Manufacturing,261,0.103,46596.0,6.33,0.2,0.448
+Wholesale,261,0.092,33826.0,6.28,0.19,0.452
+Retail,258,0.124,34557.0,6.44,0.21,0.504
