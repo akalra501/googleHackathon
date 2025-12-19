@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 df1 = pd.read_csv('data/dataset1.csv')
+print(len(df1[df1['is_churned']==1]))
+df2 = pd.read_csv('data/dataset2.csv')
+df2 = df2.sort_values(by=['customer_id', 'date'], ascending=[True, True])
+
+df2.to_csv('data/dataset2.csv', index=False)
 # df2 = pd.read_csv('data/dataset2a.csv')
 # df3 = pd.read_csv('data/dataset2b.csv')
 # df4 = pd.read_csv('data/dataset3.csv')
@@ -29,6 +34,7 @@ df1 = pd.read_csv('data/dataset1.csv')
 # for i in columns:
 #     print(df1[i].value_counts())
 
-print(len(df1[(df1['product_tier'] == 'Starter')& df1['is_churned']==1])/len(df1[df1['is_churned']==1]))
-print(len(df1[(df1['product_tier'] == 'Growth') & (df1['is_churned'] == 1)])/len(df1[df1['is_churned'] == 1]))
-print(len(df1[(df1['product_tier'] == 'Enterprise') & (df1['is_churned'] == 1)])/len(df1[df1['is_churned'] == 1]))
+# print(len(df1[(df1['product_tier'] == 'Starter')& df1['is_churned']==1])/len(df1[df1['is_churned']==1]))
+# print(len(df1[(df1['product_tier'] == 'Growth') & (df1['is_churned'] == 1)])/len(df1[df1['is_churned'] == 1]))
+# print(len(df1[(df1['product_tier'] == 'Enterprise') & (df1['is_churned'] == 1)])/len(df1[df1['is_churned'] == 1]))
+
