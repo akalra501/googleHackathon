@@ -24,7 +24,11 @@ df1 = pd.read_csv('data/dataset1.csv')
 # # summarize_data(df4)
 
 # # print(df4.value_counts('issue_category'))
-columns = ['industry', 'company_size_bucket', 'product_tier', 
-           'sales_segment', 'acquisition_channel']
-for i in columns:
-    print(df1[i].value_counts())
+# columns = ['industry', 'company_size_bucket', 'product_tier', 
+#            'sales_segment', 'acquisition_channel']
+# for i in columns:
+#     print(df1[i].value_counts())
+
+print(len(df1[(df1['product_tier'] == 'Starter')& df1['is_churned']==1])/len(df1[df1['is_churned']==1]))
+print(len(df1[(df1['product_tier'] == 'Growth') & (df1['is_churned'] == 1)])/len(df1[df1['is_churned'] == 1]))
+print(len(df1[(df1['product_tier'] == 'Enterprise') & (df1['is_churned'] == 1)])/len(df1[df1['is_churned'] == 1]))
